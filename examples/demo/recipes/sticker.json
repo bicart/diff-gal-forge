@@ -1,0 +1,21 @@
+{
+  "schema": "diff-forge/recipe@1",
+  "id": "sticker",
+  "label": "贴纸",
+  "description": "黑描边 + 硬投影，适合导出做表情包",
+  "ops": [
+    {
+      "op": "border",
+      "color": "#101010",
+      "width": 3,
+      "alpha": 1
+    },
+    {
+      "op": "shadow",
+      "dx": 0,
+      "dy": 12,
+      "alpha": 0.28,
+      "color": "#000000"
+    }
+  ]
+}

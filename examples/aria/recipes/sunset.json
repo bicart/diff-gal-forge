@@ -1,0 +1,28 @@
+{
+  "schema": "diff-forge/recipe@1",
+  "id": "sunset",
+  "label": "黄昏逆光",
+  "description": "暖色偏移 + 轻微提亮 + 下方投影",
+  "ops": [
+    {
+      "op": "tint",
+      "color": "#ff8a3d",
+      "amount": 0.18
+    },
+    {
+      "op": "brightness",
+      "amount": 0.04
+    },
+    {
+      "op": "saturate",
+      "amount": 1.12
+    },
+    {
+      "op": "shadow",
+      "dx": 0,
+      "dy": 10,
+      "alpha": 0.18,
+      "color": "#000000"
+    }
+  ]
+}

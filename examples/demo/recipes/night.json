@@ -1,0 +1,27 @@
+{
+  "schema": "diff-forge/recipe@1",
+  "id": "night",
+  "label": "夜色描边",
+  "description": "冷色、低饱和、细白描边",
+  "ops": [
+    {
+      "op": "tint",
+      "color": "#3b5bdb",
+      "amount": 0.24
+    },
+    {
+      "op": "brightness",
+      "amount": -0.05
+    },
+    {
+      "op": "saturate",
+      "amount": 0.85
+    },
+    {
+      "op": "border",
+      "color": "#f7f7f7",
+      "width": 2,
+      "alpha": 0.9
+    }
+  ]
+}

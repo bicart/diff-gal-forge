@@ -1,0 +1,160 @@
+{
+  "schema": "diff-forge/pack@1",
+  "id": "aria-ai",
+  "title": "Aria · 粉毛双马尾",
+  "description": "本地 OpenVINO + Animagine XL 4.0 生成的示例角色：底图与所有差分都来自同一张生成图上的局部重绘，用来演示槽位叠加与配方。生成流程见 docs/ai-art.md。",
+  "author": "Diff Forge contributors",
+  "license": "CC0-1.0",
+  "canvas": {
+    "width": 832,
+    "height": 1216
+  },
+  "slots": [
+    {
+      "key": "base",
+      "label": "素体",
+      "mode": "single",
+      "default": "base"
+    },
+    {
+      "key": "costume",
+      "label": "服装",
+      "mode": "single",
+      "default": "costume-hoodie"
+    },
+    {
+      "key": "eyes",
+      "label": "眼睛",
+      "mode": "single",
+      "default": "eyes-open"
+    },
+    {
+      "key": "mouth",
+      "label": "嘴",
+      "mode": "single",
+      "default": "mouth-smile"
+    },
+    {
+      "key": "blush",
+      "label": "红晕",
+      "mode": "toggle"
+    }
+  ],
+  "layers": [
+    {
+      "id": "costume-hoodie",
+      "name": "连帽卫衣",
+      "src": "layers/costume-hoodie.png",
+      "slot": "costume",
+      "z": 25,
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "costume-uniform",
+      "name": "水手服",
+      "src": "layers/costume-uniform.png",
+      "slot": "costume",
+      "z": 25,
+      "visible": false,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "base",
+      "name": "角色底图",
+      "src": "layers/base.png",
+      "slot": "base",
+      "z": 20,
+      "visible": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "eyes-open",
+      "name": "睁眼",
+      "src": "layers/eyes-open.png",
+      "slot": "eyes",
+      "z": 30,
+      "visible": true,
+      "x": 275,
+      "y": 267
+    },
+    {
+      "id": "eyes-closed",
+      "name": "闭眼",
+      "src": "layers/eyes-closed.png",
+      "slot": "eyes",
+      "z": 30,
+      "visible": false,
+      "x": 275,
+      "y": 267
+    },
+    {
+      "id": "eyes-wink",
+      "name": "眨眼",
+      "src": "layers/eyes-wink.png",
+      "slot": "eyes",
+      "z": 30,
+      "visible": false,
+      "x": 275,
+      "y": 267
+    },
+    {
+      "id": "eyes-star",
+      "name": "星星眼",
+      "src": "layers/eyes-star.png",
+      "slot": "eyes",
+      "z": 30,
+      "visible": false,
+      "x": 275,
+      "y": 267
+    },
+    {
+      "id": "mouth-smile",
+      "name": "微笑",
+      "src": "layers/mouth-smile.png",
+      "slot": "mouth",
+      "z": 31,
+      "visible": true,
+      "x": 367,
+      "y": 359
+    },
+    {
+      "id": "mouth-open",
+      "name": "张嘴",
+      "src": "layers/mouth-open.png",
+      "slot": "mouth",
+      "z": 31,
+      "visible": false,
+      "x": 367,
+      "y": 359
+    },
+    {
+      "id": "mouth-smirk",
+      "name": "坏笑",
+      "src": "layers/mouth-smirk.png",
+      "slot": "mouth",
+      "z": 31,
+      "visible": false,
+      "x": 367,
+      "y": 359
+    },
+    {
+      "id": "blush-strong",
+      "name": "害羞红晕",
+      "src": "layers/blush-strong.png",
+      "slot": "blush",
+      "z": 32,
+      "visible": false,
+      "x": 303,
+      "y": 373
+    }
+  ],
+  "recipes": [
+    "recipes/sunset.json",
+    "recipes/night.json",
+    "recipes/sticker.json"
+  ]
+}

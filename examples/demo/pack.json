@@ -1,0 +1,200 @@
+{
+  "schema": "diff-forge/pack@1",
+  "id": "demo-momo",
+  "title": "Momo - 示例角色",
+  "description": "程序生成的原创猫耳角色，用来演示槽位、开关和纯数据配方。所有 PNG 都由 scripts/make-demo-pack.mjs 绘制，CC0。",
+  "author": "Diff Forge contributors",
+  "license": "CC0-1.0",
+  "canvas": {
+    "width": 720,
+    "height": 1080
+  },
+  "slots": [
+    {
+      "key": "base",
+      "label": "素体",
+      "mode": "single",
+      "default": "head"
+    },
+    {
+      "key": "costume",
+      "label": "服装",
+      "mode": "single",
+      "default": "dress"
+    },
+    {
+      "key": "hair",
+      "label": "发型",
+      "mode": "single",
+      "default": "hair-long"
+    },
+    {
+      "key": "eyes",
+      "label": "眼睛",
+      "mode": "single",
+      "default": "eyes-open"
+    },
+    {
+      "key": "mouth",
+      "label": "嘴",
+      "mode": "single",
+      "default": "mouth-smile"
+    },
+    {
+      "key": "bangs",
+      "label": "刘海",
+      "mode": "single",
+      "default": "bangs-a"
+    },
+    {
+      "key": "blush",
+      "label": "红晕",
+      "mode": "toggle"
+    },
+    {
+      "key": "ribbon",
+      "label": "蝴蝶结",
+      "mode": "toggle"
+    },
+    {
+      "key": "glasses",
+      "label": "眼镜",
+      "mode": "toggle"
+    }
+  ],
+  "layers": [
+    {
+      "id": "hair-long",
+      "name": "长发",
+      "src": "layers/hair-long.png",
+      "slot": "hair",
+      "z": 0,
+      "visible": true
+    },
+    {
+      "id": "hair-bob",
+      "name": "短发",
+      "src": "layers/hair-bob.png",
+      "slot": "hair",
+      "z": 0,
+      "visible": false
+    },
+    {
+      "id": "dress",
+      "name": "奶油连衣裙",
+      "src": "layers/body-dress.png",
+      "slot": "costume",
+      "z": 10,
+      "visible": true
+    },
+    {
+      "id": "hoodie",
+      "name": "藏青卫衣",
+      "src": "layers/body-hoodie.png",
+      "slot": "costume",
+      "z": 10,
+      "visible": false
+    },
+    {
+      "id": "head",
+      "name": "头与耳朵",
+      "src": "layers/head.png",
+      "slot": "base",
+      "z": 20,
+      "visible": true
+    },
+    {
+      "id": "eyes-open",
+      "name": "睁眼",
+      "src": "layers/eyes-open.png",
+      "slot": "eyes",
+      "z": 30,
+      "visible": true
+    },
+    {
+      "id": "eyes-closed",
+      "name": "闭眼",
+      "src": "layers/eyes-closed.png",
+      "slot": "eyes",
+      "z": 30,
+      "visible": false
+    },
+    {
+      "id": "eyes-star",
+      "name": "星星眼",
+      "src": "layers/eyes-star.png",
+      "slot": "eyes",
+      "z": 30,
+      "visible": false
+    },
+    {
+      "id": "mouth-smile",
+      "name": "微笑",
+      "src": "layers/mouth-smile.png",
+      "slot": "mouth",
+      "z": 31,
+      "visible": true
+    },
+    {
+      "id": "mouth-o",
+      "name": "惊讶",
+      "src": "layers/mouth-o.png",
+      "slot": "mouth",
+      "z": 31,
+      "visible": false
+    },
+    {
+      "id": "mouth-smirk",
+      "name": "坏笑",
+      "src": "layers/mouth-smirk.png",
+      "slot": "mouth",
+      "z": 31,
+      "visible": false
+    },
+    {
+      "id": "blush-soft",
+      "name": "淡淡红晕",
+      "src": "layers/blush-soft.png",
+      "slot": "blush",
+      "z": 32,
+      "visible": false
+    },
+    {
+      "id": "ribbon-red",
+      "name": "红蝴蝶结",
+      "src": "layers/ribbon-red.png",
+      "slot": "ribbon",
+      "z": 40,
+      "visible": false
+    },
+    {
+      "id": "glasses",
+      "name": "圆眼镜",
+      "src": "layers/glasses.png",
+      "slot": "glasses",
+      "z": 41,
+      "visible": false
+    },
+    {
+      "id": "bangs-a",
+      "name": "侧分刘海",
+      "src": "layers/bangs-a.png",
+      "slot": "bangs",
+      "z": 50,
+      "visible": true
+    },
+    {
+      "id": "bangs-b",
+      "name": "中分刘海",
+      "src": "layers/bangs-b.png",
+      "slot": "bangs",
+      "z": 50,
+      "visible": false
+    }
+  ],
+  "recipes": [
+    "recipes/sunset.json",
+    "recipes/night.json",
+    "recipes/sticker.json"
+  ]
+}

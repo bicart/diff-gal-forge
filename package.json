@@ -1,0 +1,55 @@
+{
+  "name": "dsh-diff-forge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Diff Forge — a generic layered-character variation studio for DeepSeek Harness, with data-only packs, recipes, and AI collaboration prompts.",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "sprite",
+    "layered",
+    "character",
+    "variation",
+    "ai"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./icon": "./icon.svg",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "locale/*.json",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "docs",
+    "examples",
+    "scripts"
+  ],
+  "scripts": {
+    "test": "node --test tests/pack.test.mjs tests/recipe.test.mjs tests/route.test.mjs tests/client.test.mjs",
+    "demo": "node scripts/make-demo-pack.mjs",
+    "previews": "node scripts/render-previews.mjs",
+    "validate": "node scripts/validate-pack.mjs examples"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ]
+    }
+  }
+}
